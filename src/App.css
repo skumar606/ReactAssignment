@@ -36,3 +36,22 @@
     transform: rotate(360deg);
   }
 }
+
+.grid {
+  padding-left: 0%;
+  padding-right: 0%;
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+}
+
+.header {
+  text-align: center;
+  font-weight: 600;
+  color: purple;
+  border: 1px solid black;
+}
+
+.content {
+  border: 1px solid black;
+  justify-content: right;
+}
