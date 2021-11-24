@@ -42,19 +42,6 @@ class DeployColumn extends React.Component<Props, State> {
 
     handleInputChange1(event: React.ChangeEvent<HTMLInputElement>, i: number) {
         this.setState(prevState => {
-            // const str = `options${num}`;
-            // // console.log(prevState[str as keyof typeof prevState]);
-            // const options = prevState[str as keyof typeof prevState];
-            // const optionsData = options.data;
-            // const j = Number(event.target.dataset.index);
-            // const obj = optionsData[i-1][j-1];
-            // obj.isChecked = event.target.value;
-            // optionsData[i-1][j-1] = obj;
-            // // const {options1, options2, options3, options4} = prevState;
-            // // const state = prevState;
-            // // state[str as keyof typeof prevState] = options;
-            // return {options1: options}
-
             const j = Number(event.target.dataset.index);
             const arr = prevState.options1;
             arr[i-1][j-1] = Boolean(event.target.value);
@@ -115,7 +102,7 @@ class DeployColumn extends React.Component<Props, State> {
                     </div>
                 </div>
                 <div className="border border-dark border-2 p-2">
-                    <OptionsList options={o1d1} flag={this.state.options1[0]} onInputChange={(event: any) => this.handleInputChange1(event, 1)} />
+                    <OptionsList options={o1d1} flag={this.state.options1[0]} onInputChange={(event: React.ChangeEvent<HTMLInputElement>) => this.handleInputChange1(event, 1)} />
                 </div>
 
                 <div className="border border-dark border-2 p-2">
@@ -123,23 +110,23 @@ class DeployColumn extends React.Component<Props, State> {
                 </div>
 
                 <div className="border border-dark border-2 p-2">
-                    <OptionsList options={o2d1} flag={this.state.options2[0]} onInputChange={(event: any) => this.handleInputChange2(event, 1)} />
+                    <OptionsList options={o2d1} flag={this.state.options2[0]} onInputChange={(event: React.ChangeEvent<HTMLInputElement>) => this.handleInputChange2(event, 1)} />
                     <div>
                         Deploy Email React Apps
                     </div>
-                    <OptionsList options={o2d2} flag={this.state.options2[1]} onInputChange={(event: any) => this.handleInputChange2(event, 2)} />
+                    <OptionsList options={o2d2} flag={this.state.options2[1]} onInputChange={(event: React.ChangeEvent<HTMLInputElement>) => this.handleInputChange2(event, 2)} />
                     <div>
                         Confirm queues are empty before doing the remaining
                     </div>
-                    <OptionsList options={o2d3} flag={this.state.options2[2]} onInputChange={(event: any) => this.handleInputChange2(event, 3)} />
+                    <OptionsList options={o2d3} flag={this.state.options2[2]} onInputChange={(event: React.ChangeEvent<HTMLInputElement>) => this.handleInputChange2(event, 3)} />
                     <div className="pl-3">
-                        <OptionsList options={o2d4} flag={this.state.options2[3]} onInputChange={(event: any) => this.handleInputChange2(event, 4)} />
+                        <OptionsList options={o2d4} flag={this.state.options2[3]} onInputChange={(event: React.ChangeEvent<HTMLInputElement>) => this.handleInputChange2(event, 4)} />
                     </div>
-                    <OptionsList options={o2d5} flag={this.state.options2[4]} onInputChange={(event: any) => this.handleInputChange2(event, 5)} />
+                    <OptionsList options={o2d5} flag={this.state.options2[4]} onInputChange={(event: React.ChangeEvent<HTMLInputElement>) => this.handleInputChange2(event, 5)} />
                     <div>
                         <b>DO THIS LAST</b> as it restarts the scheduler & initiator
                     </div>
-                    <OptionsList options={o2d6} flag={this.state.options2[5]} onInputChange={(event: any) => this.handleInputChange2(event, 6)} />
+                    <OptionsList options={o2d6} flag={this.state.options2[5]} onInputChange={(event: React.ChangeEvent<HTMLInputElement>) => this.handleInputChange2(event, 6)} />
                 </div>
 
                 <div className="border border-dark border-2 p-2">
@@ -148,14 +135,14 @@ class DeployColumn extends React.Component<Props, State> {
                         <br />
                         Encompass React Apps
                     </div>
-                    <OptionsList options={o3d1} flag={this.state.options3[0]} onInputChange={(event: any) => this.handleInputChange3(event, 1)} /> 
+                    <OptionsList options={o3d1} flag={this.state.options3[0]} onInputChange={(event: React.ChangeEvent<HTMLInputElement>) => this.handleInputChange3(event, 1)} /> 
                     <div>Other APIs</div>
-                    <OptionsList options={o3d2} flag={this.state.options3[1]} onInputChange={(event: any) => this.handleInputChange3(event, 2)} />
+                    <OptionsList options={o3d2} flag={this.state.options3[1]} onInputChange={(event: React.ChangeEvent<HTMLInputElement>) => this.handleInputChange3(event, 2)} />
                 </div>
 
                 <div className="border border-dark border-2 p-2">
                     <div><b>MISC</b></div>
-                    <OptionsList options={o4d1} flag={this.state.options4[0]} onInputChange={(event: any) => this.handleInputChange4(event, 1)} />
+                    <OptionsList options={o4d1} flag={this.state.options4[0]} onInputChange={(event: React.ChangeEvent<HTMLInputElement>) => this.handleInputChange4(event, 1)} />
                 </div>
             </Col>
         )
